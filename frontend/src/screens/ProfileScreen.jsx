@@ -41,7 +41,10 @@ const ProfileScreen = () => {
                 const res = await updateProfile({ _id:userInfo._id,name, email, password }).unwrap()
                 dispatch(setCredentials(res))
                 toast.success('Profile updated')
+                setPassword('')
+                setConfirmPassword('')
             } catch (error) {
+                console.log(error)
                 toast.error(error?.data?.message || error.error)
             }
         }

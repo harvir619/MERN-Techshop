@@ -17,7 +17,7 @@ main {
 }
 
 .product-title {
-  height: 2.5em; /* Set a fixed height */
+  height: 2.5em !important; /* Set a fixed height */
   overflow: hidden; /* Hide overflow content */
   text-overflow: ellipsis; /* Add ellipsis for long text */
   white-space: nowrap; /* Prevent wrapping */
@@ -46,8 +46,9 @@ table th {
 .carousel-caption {
   position: absolute;
   width: 100%;
-  left: 0;
+  left: 0 !important;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(106, 146, 138, 0.5);
 }
+

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link,useNavigate, useParams } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
 import Message from '../../components/Message'
 import Loader from '../../components/Loader'
 import FormContainer from '../../components/FormContainer'
@@ -19,12 +18,11 @@ const ProductEditScreen = () => {
     const [countInStock, setCountInStock] = useState(0)
     const [description, setDescription] = useState('')
 
-    const { data:product, isLoading,refetch, error } = useGetProductQuery(productId)
+    const { data:product,refetch } = useGetProductQuery(productId)
     const [updateProduct, { isLoading: loadingUpdate, error: errorUpdate, isError }] = useUpdateProductMutation()
     const [uploadProductImage,{isLoading: loadingUpload}] = useUploadProductImageMutation()
     
     const navigate = useNavigate()
-    const dispatch = useDispatch()
     
     useEffect(() => {
         if (product) {

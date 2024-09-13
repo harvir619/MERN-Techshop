@@ -14,7 +14,7 @@ const UserEditScreen = () => {
     const [email, setEmail] = useState('')
     const [isAdmin, setIsAdmin] = useState(false)
 
-    const { data:user, isLoading,refetch, error } = useGetUsersDetailsQuery(userId)
+    const { data:user,refetch } = useGetUsersDetailsQuery(userId)
     const [updateUser, { isLoading: loadingUpdate, error: errorUpdate, isError }] = useUpdateUserMutation()
     
     const navigate = useNavigate()

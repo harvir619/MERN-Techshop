@@ -27,7 +27,7 @@ const HomeScreen = () => {
                       <Row>
                     {data.products.map((product) => (
                         <Col key={product._id}   sm={12} md={6} lg={4} xl={3}>
-                            <h3 style={{height:'2.3em',overflow:'hidden',textOverflow:'ellipsis'}}>{product.name}</h3>
+                            <h3 style={{height:'2.5em',overflow:'hidden',textOverflow:'ellipsis'}}>{product.name}</h3>
                             <Product product={product}/>
                         </Col>
                     ))}

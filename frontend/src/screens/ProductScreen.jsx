@@ -44,6 +44,7 @@ const ProductScreen = () => {
         }
 
     }
+    
   return (
       <>
           <Link to={"/"} className="btn btn-light my-3">Go Back</Link>
@@ -132,7 +133,7 @@ const ProductScreen = () => {
                                   <ListGroup.Item>
                                       <h2>Write a Customer Review</h2>
                                       {isReviewLoading && <Loader />}
-                                      {userInfo ? (
+                                      {userInfo.userInfo ? (
                                           <Form onSubmit={submitHandler}>
                                               <Form.Group controlId='rating'>
                                                   <Form.Label>Rating</Form.Label>
